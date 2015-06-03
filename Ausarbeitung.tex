@@ -6,9 +6,17 @@
 \usepackage[ngerman,english]{babel}
 \usepackage[utf8]{inputenc}
 \bibliographystyle{splncs}
+
+\usepackage{libertine}
+\usepackage{pifont}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage{graphicx}
+
 \begin{document}
 
-\title{Chancen Aufstrebender Technologischer Paradigmen wie Continuous Delivery, Microservices und Mobile First für Modernes Enterprise Architecture Management}
+\title{GSem Ausarbeitung: Überblick EAM}
+\subtitle{Chancen Aufstrebender Technologischer Paradigmen wie Continuous Delivery, Microservices und Mobile First für Modernes Enterprise Architecture Management}
 \author{Daniel Kirchner}
 \institute{HAW Hamburg, 20099 Hamburg, Germany}
 \maketitle
@@ -32,7 +40,7 @@ schlanken und stabilen Betrieb sicherzustellen ist seit Jahrzehnten Gegenstand v
 
 In den letzten Jahren haben Techniken aus der Softwareentwicklung mit pragmatischen Ansätzen, kurzen Feedbackzyklen und kleinen Teams gute Resultate in der Umsetzung komplexer Softwareprojekte erzielt und die Aufmerksamkeit des \textit{Enterprise Architecture Managements} erregt\cite{buc:mat}.\\
 
-In diesem Aufsatz werden konkrete Möglichkeiten erläutert mithilfe aufstrebender technologischer Paradigmen das klassische \textit{Enterprise Architecture Management} zu erweitern und gegebenenfalls im Sinne von \textit{lean}, \textit{agile} und \textit{collaborative} zu verändern.
+In diesem Aufsatz werden konkrete Möglichkeiten erläutert aufstrebende technologische Paradigmen in eine \textit{Enterprise Architecture} zu integrieren und Verknüpfungen zum \textit{Enterprise Architecture Management} erläutert.
 
 %
 \section{Grundlagen des Enterprise Architecture Managements}
@@ -51,27 +59,50 @@ Nach \cite{ben} ergeben sich folgende Arbeitsdefinitionen von \textit{Enterprise
 \textbf{\textit{Enterprise Architecture Management (EAM)}} ist ein strukturierter Ansatz um \textit{EA} zu erzeugen, zu verwalten und anzuwenden um die IT-Nutzung am Geschäftsbetrieb auszurichten. Dabei übersetzt \textit{EAM} die geschäftliche Vision in konkrete Unternehmungen und begleitet das Unternehmen vom jeweils aktuellen EA-Zustand bis zu einem Zielzustand.
  
 \subsection{Tools und Frameworks}
+Um einen gemeinsamen Wortschatz der Beteiligten des \textit{EAM} zu schaffen, aber auch um eine Sammlung von bewährten Richtlinien, Prozessen und Dokumenten verfügbar zu machen wurden verschiedenste \textit{EAM}-Frameworks entwickelt.\\
 
+Zu den wichtigsten (siehe \cite{ben}) Frameworks gehören das Zachman Framework\footnote{https://www.zachman.com/about-the-zachman-framework, abgerufen am 03.06.2015}, das Open Group Architecture Framework (TOGAF)\footnote{https://www.opengroup.org/togaf/, abgerufen am 03.06.2015} und die Gartner Methodologies\footnote{http://www.gartner.com/technology/research/methodologies/methodology.jsp, abgerufen am 03.06.2015}.
 %
 \section{Übersicht der betrachteten Technologischen Paradigmen}
-
 %
 \subsection{Continuous Delivery}
+\textbf{\textit{Continous Delivery}} ist eine Erweiterung von \textit{Continous Integration}, die als Methodik der Softwareentwicklung bereits erfolgreich in Unternehmen etabliert ist (\cite{fit:sto}).
 
+Wesentliches Ziel ist es schnelle Rückmeldung für eingepflegten Code durch möglichst unmittelbare Auslieferung der Änderung bis in das laufende System zu erreichen. Dabei wird eine Automatisierungslinie (\textit{continuous delivery pipeline}) geschaffen, die Build, Tests und Deployment des geänderten produktiven Systems soweit automatisiert, dass ein möglichst schnell Werte (im Sinne von produktiv eingesetzten Features) geschaffen werden (Vgl [wolff]).
 %
 \subsection{Microservices}
 \subsection{DevOps}
 \subsection{Mobile First}
 \section{Vorschläge zur Umsetzung der Paradigmen auf Unternehmensebene}
+
+\begin{figure}[ht!]
+	\centering
+  \includegraphics[scale=0.5]{simple_diagram.pdf}
+	\caption{Naive Sicht auf eine Contiuous-Delivery-zentrierte Unternehmensarchitektur}
+	\label{fig:model}
+\end{figure}
+
 \section{Mögliche Einflüsse auf EAM}
 \section{Zusammenfassung und Ausblick}
-Es wurde erläutert, dass aus einer sehr oberflächlichen Betrachtung heraus durchaus vielversprechende Möglichkeiten bestehen durch konkrete Einflechtung der genannten technologischen Paradigmen einen höheren Reifegrad (\textit{Maturity Level}) bezüglich Agilität und Kollaboration durch und innerhalb von Unternehmens-IT zu erreichen.\\
+Es wurde erläutert, dass aus einer sehr oberflächlichen Betrachtung heraus durchaus die Möglichkeit bestehen könnte durch konkrete Einflechtung der genannten technologischen Paradigmen einen erhöhten Reifegrad (\textit{Maturity Level}) bezüglich Agilität und Kollaboration durch und innerhalb von Unternehmens-IT zu erreichen.\\
 
-Es stellen sich jedoch viele offene Fragen, die in weiterer Literaturrecherche und auch im Experiment behandelt werden müssen.\\
+Es stellen sich jedoch viele offene Fragen, die in weiterer Literaturrecherche und auch im Experiment behandelt werden müssten, beispielsweise:
+\begin{itemize}
+	\item Wie wird eine sinnvolle Aufteilung in Geschäftsbereiche gemessen?
+	\item Welche Metriken existieren 
+	\item Wie groß ist der Einfluss von Duplikation von Komponenten?
+	\item Wie geht das vorgeschlagene Modell mit Korrosion seiner Struktur um?
+	\item Welche Artefakte von üblichen EAM-Frameworks lassen sich noch anwenden, welche müssen angepasst werden?
+	\item Wie könnte eine Transition von einer bestehenden Architektur aussehen?
+	\item Welchen hat internationale Verteilung auf das Modell?
+	\item Welche Einfluss hat das Modell auf Sicherheits- und Verfügbarkeitsrisiken?
+\end{itemize}
 
 Das \textit{HAW Labor für Anwendungsintegration} ist dabei ein Bereich, der für die Untersuchung vieler dieser Fragen einen akademisch geschlossenen und dennoch realitätsnahen Bereich bietet.\\
 
-Ein konkreter Einstieg könnte sein, im Rahmen eines Grundprojektes die technischen Vorraussetzungen für eine \textit{Continuous Delivery Pipeline} in einem technisch und geschäftlich heterogenen Umfeld zu schaffen. Durch zweimal jährlich wechselnde Studentengruppen (in der Rolle der Softwareentwickler) und die Abwesenheit des Risikos geschäftsvernichtender katastrophaler Systemausfälle sind dann die Rahmenbedingungen für weiterführende Untersuchungen und Experimente gegeben.
+Ein konkreter Einstieg könnte sein, im Rahmen eines Grundprojektes die technischen Vorraussetzungen für eine \textit{Continuous Delivery Pipeline} in einem technisch und geschäftlich heterogenen Umfeld zu schaffen.\\
+
+Durch zweimal jährlich wechselnde Studentengruppen (in der Rolle der Softwareentwickler) und die Abwesenheit des Risikos geschäftsvernichtender katastrophaler Systemausfälle sind dann die Rahmenbedingungen für weiterführende Untersuchungen und Experimente gegeben.
 
 \cite{SeojinKim:2008:ACI:1642931.1642990}
 \cite{clar:eke}
@@ -107,6 +138,17 @@ Buckl, S., Matthes, F.:
 Towards an Agile Design of the Enterprise Architecture Management Function
 2011 15th IEEE International Enterprise Distributed Object Computing Conference Workshops
 Pages 322-329
+
+\bibitem {fit:sto}
+Fitzgerald, F., Stol, K.-J.:
+Continuous software engineering and beyond: trends and challenges
+RCoSE 2014 Proceedings of the 1st International Workshop on Rapid Continuous Software Engineering
+Pages 1-9
+
+\bibitem {wolff}
+Wolf, D.:
+Continuous Delivery: Der pragmatische Einstieg
+2014 dpunkt.verlag GmbH
 
 %
 \end{thebibliography}
