@@ -1,13 +1,14 @@
 \documentclass{llncs}
 %
 \usepackage{cite}
+\usepackage{llncsdoc}
 \usepackage[ngerman,colorlinks=true]{hyperref}
 \usepackage[ngerman,english]{babel}
 \usepackage[utf8]{inputenc}
 \bibliographystyle{splncs}
 \begin{document}
 
-\title{Chancen Aufkommender Technologischer Paradigmen wie Continuous Delivery, Microservices und Mobile First für Modernes Enterprise Architecture Management}
+\title{Chancen Aufstrebender Technologischer Paradigmen wie Continuous Delivery, Microservices und Mobile First für Modernes Enterprise Architecture Management}
 \author{Daniel Kirchner}
 \institute{HAW Hamburg, 20099 Hamburg, Germany}
 \maketitle
@@ -15,7 +16,7 @@
 \begin{abstract}
 Es wird eine Auswahl von neuen technologischen Paradigmen betrachtet, bei denen zur Zeit wachsendes Interesse und erste positive Erfahrungen in dem Betrieb und der Entwicklung von Software beobachtet werden.
 Aus diesen wird versucht einen allgemeinen Trend zu erkennen und es werden Verknüpfungspunkte zu klassischen Frameworks aus dem Enterprise Architecture Management und der IT Governance vorgeschlagen.
-Die Ergebnisse werden unter den Gesichtspunkten \textit{lean}, \textit{agile} und \textit{collaborative} bewertet und diskutiert.
+Die Ergebnisse werden unter den Gesichtspunkten \textit{lean}, \textit{agile} und \textit{collaborative} diskutiert.
 \end{abstract}
 %
 \section{Motivation}
@@ -29,15 +30,27 @@ Dabei werden nicht nur Daten erzeugt, verteilt und konsumiert, sondern zunehmend
 Das Problem die IT-Landschaft eines Unternehmens ständig neuen Bedürfnissen anzupassen und dabei einen möglichst
 schlanken und stabilen Betrieb sicherzustellen ist seit Jahrzehnten Gegenstand von wissenschaftlicher und industrieller Forschung.\\
 
-In den letzten Jahren haben Techniken aus der Softwareentwicklung mit pragmatischen Ansätzen, kurzen Feedbackzyklen und kleinen Teams gute Resultate erzielt und die Aufmerksamkeit der Enterprise Architecture Managements erregt\cite{buc:mat}.\\
+In den letzten Jahren haben Techniken aus der Softwareentwicklung mit pragmatischen Ansätzen, kurzen Feedbackzyklen und kleinen Teams gute Resultate in der Umsetzung komplexer Softwareprojekte erzielt und die Aufmerksamkeit des \textit{Enterprise Architecture Managements} erregt\cite{buc:mat}.\\
 
-In diesem Aufsatz wird die Möglichkeit erläutert
-
-
+In diesem Aufsatz werden konkrete Möglichkeiten erläutert mithilfe aufstrebender technologischer Paradigmen das klassische \textit{Enterprise Architecture Management} zu erweitern und gegebenenfalls im Sinne von \textit{lean}, \textit{agile} und \textit{collaborative} zu verändern.
 
 %
 \section{Grundlagen des Enterprise Architecture Managements}
+\subsection{Definition und Scope}
+Nach \cite{ben} ergeben sich folgende Arbeitsdefinitionen von \textit{Enterprise Architecture} und \textit{Enterprise Architecture Management}:\\
 
+\textbf{\textit{Enterprise Architecture (EA)}} ist eine Repräsentation der Struktur und des Verhaltens der IT-Landschaft eines Unternehmens mit Bezug auf das geschäftliche Umfeld. Dabei stellt sie die momentane und die zukünftige Nutzung von IT im Unternehmen dar und liefert einen Plan zur Erreichung eines zukünftigen Zustands. Dabei bietet sie
+%
+\begin{itemize}
+	\item Einsichten in die IT-Nutzung aus Sicht des Geschäftsbetriebs
+	\item eine Vision für die zukünftige Nutzung von IT im Geschäftsbetrieb
+	\item einen Plan für schrittweise Evolution hin zu einem zukünftigen Zustand
+\end{itemize}
+
+%
+\textbf{\textit{Enterprise Architecture Management (EAM)}} ist ein strukturierter Ansatz um \textit{EA} zu erzeugen, zu verwalten und anzuwenden um die IT-Nutzung am Geschäftsbetrieb auszurichten. Dabei übersetzt \textit{EAM} die geschäftliche Vision in konkrete Unternehmungen und begleitet das Unternehmen vom jeweils aktuellen EA-Zustand bis zu einem Zielzustand.
+ 
+\subsection{Tools und Frameworks}
 
 %
 \section{Übersicht der betrachteten Technologischen Paradigmen}
@@ -51,8 +64,14 @@ In diesem Aufsatz wird die Möglichkeit erläutert
 \subsection{Mobile First}
 \section{Vorschläge zur Umsetzung der Paradigmen auf Unternehmensebene}
 \section{Mögliche Einflüsse auf EAM}
-\section{Zusammenfassung}
-Wir haben gesehen...
+\section{Zusammenfassung und Ausblick}
+Es wurde erläutert, dass aus einer sehr oberflächlichen Betrachtung heraus durchaus vielversprechende Möglichkeiten bestehen durch konkrete Einflechtung der genannten technologischen Paradigmen einen höheren Reifegrad (\textit{Maturity Level}) bezüglich Agilität und Kollaboration durch und innerhalb von Unternehmens-IT zu erreichen.\\
+
+Es stellen sich jedoch viele offene Fragen, die in weiterer Literaturrecherche und auch im Experiment behandelt werden müssen.\\
+
+Das \textit{HAW Labor für Anwendungsintegration} ist dabei ein Bereich, der für die Untersuchung vieler dieser Fragen einen akademisch geschlossenen und dennoch realitätsnahen Bereich bietet.\\
+
+Ein konkreter Einstieg könnte sein, im Rahmen eines Grundprojektes die technischen Vorraussetzungen für eine \textit{Continuous Delivery Pipeline} in einem technisch und geschäftlich heterogenen Umfeld zu schaffen. Durch zweimal jährlich wechselnde Studentengruppen (in der Rolle der Softwareentwickler) und die Abwesenheit des Risikos geschäftsvernichtender katastrophaler Systemausfälle sind dann die Rahmenbedingungen für weiterführende Untersuchungen und Experimente gegeben.
 
 \cite{SeojinKim:2008:ACI:1642931.1642990}
 \cite{clar:eke}
